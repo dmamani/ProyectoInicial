@@ -1,17 +1,29 @@
-function Contador (cadena, letra){
-	var cont = 0;
-	var i = 0;	
-	while (i < cadena.length){
-		if(cadena[i]==letra)
-			cont++;
-		i++;
+function Tabla (num, ope, can){
+	if(ope=="+"){
+		for (var i=1;i<=can;i++)	{
+		console.log(num +" + "+i+" = "+(num+i));
+		}
+	}		
+	if(ope=="-"){
+		for (var i=1;i<=can;i++)	{
+		console.log(num +" - "+i+" = "+(num-i));
+		}
 	}
-	return cont;	
+	if(ope=="x"){
+		for (var i=1;i<=can;i++)	{
+		console.log(num +" x "+i+" = "+(num*i));
+		}
+	}
+	if(ope=="/"){
+		for (var i=1;i<=can;i++)	{
+		console.log(num +" / "+i+" = "+(num/i));
+		}
+	}
 }
+	
 
-
-
-var x="Hula Mundo";
-var y='u';
-console.log("La cantidad de letras "+y+" es:");
-console.log(Contador(x,y));
+var n=4;
+var o="/";
+var c=5;
+console.log("La tabla de "+n+" es:");
+console.log(Tabla(n,o,c));
